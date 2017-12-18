@@ -1,8 +1,12 @@
+const userModel = require('../models/userModel.js')
 
 class userController {
     constructor() {}
     static signup(req, res, next) {
-        return res.json({message: 'i am in the controller'})
+        userModel.signup(req.body)
+            .then(response => {
+                return res.json({message: response})
+            }) 
     }
    
 }
