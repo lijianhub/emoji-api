@@ -1,19 +1,23 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3030
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
+
 const morgan = require('morgan')
-if (!process.env.NODE_ENV) app.use(morgan('dev'))
 app.use(morgan('dev'))
+
 const cors = require('cors')
 app.use(cors())
 app.disable('x-powered-by')
 
-
 app.get('/', (req, res, next) => {
     res.json({message:'hi'})
 })
+
+const userRouter = require('./routers/userRouter')
+app.use('/api/users', userRouter)
 
 app.use((req, res, next) => {
     const status = 404
