@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
         table.string('avatar').notNullable().defaultTo('')
         table.string('hashed_password').notNullable().defaultTo('')
         table.integer('total_emoji').notNullable().defaultTo(0)
-    }
+    })
 }
 
 exports.down = function(knex, Promise) {

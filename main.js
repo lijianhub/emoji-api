@@ -19,6 +19,9 @@ app.get('/', (req, res, next) => {
 const userRouter = require('./routers/userRouter')
 app.use('/api/users', userRouter)
 
+const emojiRouter = require('./routers/emojiRouter')
+app.use('/api/emoji', emojiRouter)
+
 app.use((req, res, next) => {
     const status = 404
     const message = `Could not find route matching: ${req.method} ${req.path}`
