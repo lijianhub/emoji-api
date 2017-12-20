@@ -34,7 +34,27 @@ exports.seed = function(knex, Promise) {
         {id: 27, name: 'horse', symbol: '🐴', level: 2},
         {id: 28, name: 'unicorn', symbol: '🦄', level: 3},
         {id: 29, name: 'bug', symbol: '🐛', level: 1},
-        {id: 30, name: 'butterfly', symbol: '🦋', level: 3}
+        {id: 30, name: 'butterfly', symbol: '🦋', level: 3},
+        {id: 31, name: 'clown', symbol: '🤡', level: 2},
+        {id: 32, name: 'poop', symbol: '💩', level: 1},
+        {id: 33, name: 'robot', symbol: '🤖', level: 2},
+        {id: 34, name: 'kiss', symbol: '💋', level: 1},
+        {id: 35, name: 'eye', symbol: '👁', level: 1},
+        {id: 36, name: 'brain', symbol: '🧠', level: 2},
+        {id: 37, name: 'nose', symbol: '👃', level: 1},
+        {id: 38, name: 'tongue', symbol: '👅', level: 3},
+        {id: 39, name: 'hand', symbol: '🖐', level: 2},
+        {id: 40, name: 'zombie', symbol: '🧟‍', level: 3},
+        {id: 41, name: 'wizard', symbol: '🧙‍', level: 3},
+        {id: 42, name: 'mermaid', symbol: '🧜‍♀️', level: 3},
+        {id: 43, name: 'dance', symbol: '💃', level: 3},
+        {id: 44, name: 'run', symbol: '🏃‍', level: 1},
+        {id: 45, name: 'socks', symbol: '🧦', level: 2},
+        {id: 46, name: 'gloves', symbol: '🧤', level: 2},
+        {id: 47, name: 'hat', symbol: '🧢', level: 1},
+        {id: 48, name: 'dragon', symbol: '🐉', level: 2},
+        {id: 49, name: 'cactus', symbol: '🌵', level: 2},
+        {id: 50, name: 'flower', symbol: '🌻', level: 2},
       ])
     }).then(() => {
       return knex.raw(
