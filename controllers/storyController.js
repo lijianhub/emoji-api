@@ -1,4 +1,4 @@
-const emojiModel = require('../models/storyModel')
+const storyModel = require('../models/storyModel')
 
 class storyController {
     constructor(){}
