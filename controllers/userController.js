@@ -14,7 +14,12 @@ class userController {
                 return res.status(200).send(result[0])
             }) 
     }
-   
+   static deleteUser(req, res, next) {
+       userModel.deleteUser(req.params.id)
+        .then(result => {
+            return res.status(300).send({message: 'successfully deleted'})
+        })
+   }
 }
 
 module.exports = userController
