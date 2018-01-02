@@ -9,8 +9,10 @@ class userController {
             }) 
     }
     static userExists(req, res, next) {
-        console.log(req.body, 'this is the userController')
-        return res.json('hekfsjkdfjdskjfhdskfsd').status(200)
+        userModel.userExists(req.body.email)
+            .then(result => {
+                return res.status(200).send(result[0])
+            }) 
     }
    
 }
