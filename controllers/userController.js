@@ -8,6 +8,10 @@ class userController {
                 return res.json({message: response})
             }) 
     }
+    static userExists(req, res, next) {
+        console.log(req.body, 'this is the userController')
+        return res.json('hekfsjkdfjdskjfhdskfsd').status(200)
+    }
    
 }
 
