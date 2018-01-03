@@ -20,6 +20,13 @@ class userController {
             return res.status(300).send({message: 'successfully deleted'})
         })
    }
+   static winEmoji (req, res, next) {
+       console.log(req.params, req.body)
+       userModel.winEmoji(req.params.id, req.body.emoji_id)
+        .then(userCollection => {
+            return res.status(300).send({result:userCollection})
+        }) 
+   }
 }
 
 module.exports = userController

@@ -1,5 +1,6 @@
 
 const db = require('../db/knex.js')
+const emojiModel = require('./emojiModel.js')
 
 class userModel {
     constructor(){}
@@ -13,6 +14,12 @@ class userModel {
         }
     static deleteUser(id){
         return db('users').where({id}).del()
+    }
+    static winEmoji(userId, emojiId) {
+        return db('user_emoji').insert({user_id: userId, emoji_id: emojiId})
+            .then(whatever => {
+                return emojiModel.getByUser(userId)  
+            })
     }
 }
 

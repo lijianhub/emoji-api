@@ -45,8 +45,8 @@ exports.seed = function(knex, Promise) {
         {id: 38, name: 'tongue', image: '👅', level: 3},
         {id: 39, name: 'hand', image: '🖐', level: 2},
         {id: 40, name: 'zombie', image: '🧟', level: 3},
-        {id: 41, name: 'wizard', image: '🧙', level: 3},
-        {id: 42, name: 'mermaid', image: '🧜', level: 3},
+        {id: 41, name: 'wizard', image: '🧙‍', level: 3},
+        {id: 42, name: 'mermaid', image: '🧜‍', level: 3},
         {id: 43, name: 'dance', image: '💃', level: 3},
         {id: 44, name: 'run', image: '🏃', level: 1},
         {id: 45, name: 'socks', image: '🧦', level: 2},
@@ -55,6 +55,17 @@ exports.seed = function(knex, Promise) {
         {id: 48, name: 'dragon', image: '🐉', level: 2},
         {id: 49, name: 'cactus', image: '🌵', level: 2},
         {id: 50, name: 'flower', image: '🌻', level: 2},
+        {id: 51, name: 'bike', image: '🚲', level: 1},
+        {id: 52, name: 'tractor', image: '🚜', level: 2},
+        {id: 53, name: 'rabbit', image: '🐇', level: 2},
+        {id: 54, name: 'mouse', image: '🐁', level: 2},
+        {id: 55, name: 'chipmunk', image: '🐿', level: 2},
+        {id: 56, name: 'tree', image: '🌲', level: 2},
+        {id: 57, name: 'sad', image: '😢', level: 1},
+        {id: 58, name: 'mad', image: '😠', level: 1},
+        {id: 59, name: 'swim', image: '🏊', level: 2},
+        {id: 60, name: 'walk', image: '🚶‍', level: 2},
+        {id: 61, name: 'ogre', image: '👹', level: 2},
       ])
     }).then(() => {
       return knex.raw(
