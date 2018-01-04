@@ -2,12 +2,6 @@ const userModel = require('../models/userModel.js')
 
 class userController {
     constructor() {}
-    static signup(req, res, next) {
-        userModel.signup(req.body)
-            .then(response => {
-                return res.json({message: response})
-            }) 
-    }
     static userExists(req, res, next) {
         userModel.userExists(req.body.email)
             .then(result => {
@@ -17,14 +11,13 @@ class userController {
    static deleteUser(req, res, next) {
        userModel.deleteUser(req.params.id)
         .then(result => {
-            return res.status(300).send({message: 'successfully deleted'})
+            return res.status(202).send({message: 'successfully deleted'})
         })
    }
    static winEmoji (req, res, next) {
-       console.log(req.params, req.body)
        userModel.winEmoji(req.params.id, req.body.emoji_id)
         .then(userCollection => {
-            return res.status(300).send({result:userCollection})
+            return res.status(201).send({result:userCollection})
         }) 
    }
 }

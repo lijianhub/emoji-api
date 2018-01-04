@@ -9,6 +9,10 @@ class storyModel {
       return db('users_stories').where({user_id: id})
           .then(results => results.map(result => result.story_id))
   }
+  static addStory(user_id, story_id){
+      return db('users_stories').insert({user_id, story_id})
+        .then(results => story_id)
+  }
 }
 
 module.exports = storyModel
