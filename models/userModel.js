@@ -21,6 +21,12 @@ class userModel {
                 return emojiModel.getByUser(userId)  
             })
     }
+    static updateInfo(id, avatar) {
+        return db('users').where({id}).update({avatar})
+            .then(whatever => {
+                return db('users').where({id}).first()
+            })
+    }
 }
 
 module.exports = userModel
