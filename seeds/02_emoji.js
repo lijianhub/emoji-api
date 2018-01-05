@@ -66,7 +66,15 @@ exports.seed = function(knex, Promise) {
         {id: 59, name: 'swim', image: '🏊', level: 2},
         {id: 60, name: 'walk', image: '🚶‍', level: 2},
         {id: 61, name: 'ogre', image: '👹', level: 2},
-        {id: 62, name: 'love', image : '😍', level: 1}
+        {id: 62, name: 'love', image : '😍', level: 1},
+        {id: 63, name: 'happy', image: '😀', level: 2},
+        {id: 64, name: 'happy', image: '😀', level: 2},
+        {id: 65, name: 'sick', image: '🤢', level: 1},
+        {id: 66, name: 'alien', image: '👽', level: 2},
+        {id: 67, name: 'doctor', image: '👩🏾‍⚕️', level: 2},
+        {id: 68, name: 'cook', image: '👨‍🍳', level: 1},
+        {id: 69, name: 'shoe', image: '👞', level: 2},
+        {id: 70, name: 'ant', image: '🐜', level: 1}
       ])
     }).then(() => {
       return knex.raw(
