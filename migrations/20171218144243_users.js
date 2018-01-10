@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments()
         table.string('email').notNullable().defaultTo('')
         table.string('avatar').notNullable().defaultTo('')
+        // What about timestamps?  :(
     })
 }
 
