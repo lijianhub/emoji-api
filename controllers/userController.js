@@ -21,7 +21,6 @@ class userController {
         }) 
    }
    static updateInfo (req, res, next) {
-       console.log(req.params.id, req.body.avatar)
        userModel.updateInfo(req.params.id, req.body.avatar)
        .then(avatar => {
         return res.status(201).send({result:avatar})
