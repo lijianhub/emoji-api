@@ -12,6 +12,10 @@ const cors = require('cors')
 app.use(cors())
 app.disable('x-powered-by')
 
+/*
+    If you want a route to just test if your server is up and running,
+    it's more commong to create a `/ping` route.
+*/
 app.get('/', (req, res, next) => {
     res.json({message:'hi'})
 })
